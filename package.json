@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "test": "wdio ./wdio.config.js"
+  },
+  "devDependencies": {
+    "chromedriver": "^2.35.0",
+    "express": "^4.16.2",
+    "ttystudio": "0.0.16",
+    "wdio-chromedriver-service": "^0.1.2",
+    "wdio-mocha-framework": "^0.5.12",
+    "wdio-slick-reporter": "^1.0.1",
+    "webdriverio": "^4.11.0"
+  }
+}
