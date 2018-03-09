@@ -1,5 +1,12 @@
 const express = require('express')
 
+const localPath = (() => {
+  const cliArg = process.argv.find(arg => arg.startsWith('--local='))
+  return cliArg && cliArg.replace(/^--local=/, '')
+})()
+
+const slick = require(localPath || 'wdio-slick-reporter')
+
 let server
 
 exports.config = {
@@ -26,7 +33,7 @@ exports.config = {
   baseUrl: 'http://localhost:3000',
   waitforTimeout: 20000,
   framework: 'mocha',
-  reporters: ['slick'],
+  reporters: [slick],
   mochaOpts: {
     ui: 'bdd'
   },

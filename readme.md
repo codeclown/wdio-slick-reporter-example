@@ -18,6 +18,12 @@ npm install
 npm test
 ```
 
+To run against a local copy of `wdio-slick-reporter`:
+
+```bash
+npm test -- --local=../wdio-slick-reporter
+```
+
 ## Record a gif
 
 This is the process to record a demo gif for the [main repository](https://github.com/codeclown/wdio-slick-reporter).
